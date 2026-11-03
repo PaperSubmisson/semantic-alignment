@@ -66,7 +66,7 @@ The framework selects a route based on whether the source contains explicit loop
 
 The tasks originate from SV-COMP and SpecGen. Verification goals were added where the fixed-goal route required them but none were explicitly provided. Some tasks with incorrect source code or assertions were corrected.
 
-The benchmark contains 385 tasks. Benchmark membership is independent of current framework support.
+The benchmark contains 385 tasks. 
 
 | Category | Task type | Count |
 | --- | --- | ---: |
@@ -82,4 +82,3 @@ C1–C6 use fixed input conditions and verification goals, with the LLM supplyin
 
 Each task directory contains Java source files and, where available, `spec.json`. Specifications for C1–C6 include fixed goals; C0 specifications contain only reviewed input conditions.
 `benchmark/manifest.json` records task categories, file paths, entry points, and editable proof locations.
-The framework currently has configurations for 376 tasks. The remaining nine tasks are included in the benchmark and reported as `unsupported` at runtime. Results for C0 and C1–C6 are reported separately.
