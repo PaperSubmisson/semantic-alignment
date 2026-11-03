@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "CopyArray.CopyArray": {
+      "requires": [
+        "acc(a.arr_int)",
+        "b != a ==> acc(b.arr_int, 1/2)",
+        "iBegin < iEnd ==> 0 <= iBegin && iEnd <= |a.arr_int|",
+        "iBegin < iEnd ==> iEnd <= |b.arr_int|"
+      ],
+      "ensures": [
+        "acc(a.arr_int)",
+        "|a.arr_int| == old(|a.arr_int|)",
+        "b != a ==> acc(b.arr_int, 1/2)",
+        "b.arr_int == old(b.arr_int)",
+        "forall q: Int :: 0 <= q && q < |a.arr_int| ==> a.arr_int[q] == (iBegin <= q && q < iEnd ? old(b.arr_int[q]) : old(a.arr_int[q]))"
+      ]
+    }
+  }
+}

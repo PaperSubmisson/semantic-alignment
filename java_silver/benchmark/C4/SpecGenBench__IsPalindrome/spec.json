@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "IsPalindrome.isPalindrome": {
+      "requires": [
+        "acc(s.str_chars, 1/2)"
+      ],
+      "ensures": [
+        "acc(s.str_chars, 1/2)",
+        "s.str_chars == old(s.str_chars)",
+        "res == (forall q: Int :: 0 <= q && q < |s.str_chars| ==> s.str_chars[q] == s.str_chars[|s.str_chars| - 1 - q])"
+      ]
+    }
+  }
+}

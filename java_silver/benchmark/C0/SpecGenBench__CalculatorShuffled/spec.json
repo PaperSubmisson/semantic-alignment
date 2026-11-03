@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "CalculatorShuffled.calculate": {
+      "requires": [
+        "operator == 42 ==> num2 != 0"
+      ]
+    }
+  }
+}

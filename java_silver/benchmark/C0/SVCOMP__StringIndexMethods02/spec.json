@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StringIndexMethods02.f": {
+      "requires": [
+        "(letters != null) ==> acc(letters.str_chars)",
+        "letters != null"
+      ]
+    }
+  }
+}

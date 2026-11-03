@@ -1,0 +1,20 @@
+{
+  "methods": {
+    "IsSubsequence.isSubsequence": {
+      "requires": [
+        "acc(s.str_chars, 1/2)",
+        "acc(t.str_chars, 1/2)"
+      ],
+      "ensures": [
+        "acc(s.str_chars, 1/2)",
+        "acc(t.str_chars, 1/2)",
+        "s.str_chars == old(s.str_chars)",
+        "t.str_chars == old(t.str_chars)",
+        "res == goal_subseq(s.str_chars, t.str_chars)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_subseq(s: Seq[Int], t: Seq[Int]): Bool\n  decreases |t|\n{ |s| == 0 || (|t| > 0 && (s[0] == t[0] ? goal_subseq(s[1..], t[1..]) : goal_subseq(s, t[1..]))) }"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "methods": {
+    "RotateArray.rotate": {
+      "requires": [
+        "acc(nums.arr_int)",
+        "k >= 0"
+      ],
+      "ensures": [
+        "acc(nums.arr_int)",
+        "|nums.arr_int| == old(|nums.arr_int|)",
+        "forall q: Int :: 0 <= q && q < |nums.arr_int| ==> nums.arr_int[(q + k) % |nums.arr_int|] == old(nums.arr_int[q])"
+      ]
+    }
+  }
+}

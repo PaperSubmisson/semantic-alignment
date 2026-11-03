@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "HttpServletResponse.sendRedirect": {
+      "requires": [
+        "(string != null) ==> acc(string.str_chars)"
+      ]
+    },
+    "HttpServletResponse.getWriter": {
+      "requires": []
+    },
+    "HttpServletResponse.setContentType": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)"
+      ]
+    }
+  }
+}

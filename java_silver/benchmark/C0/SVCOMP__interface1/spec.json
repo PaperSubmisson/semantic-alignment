@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "C.f": {
+      "requires": []
+    },
+    "Main.main": {
+      "requires": []
+    }
+  }
+}

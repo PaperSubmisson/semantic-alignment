@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "IsMonotonic.isMonotonic": {
+      "requires": [
+        "acc(nums.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(nums.arr_int, 1/2)",
+        "nums.arr_int == old(nums.arr_int)",
+        "res == ((forall q: Int :: 0 <= q && q + 1 < |nums.arr_int| ==> nums.arr_int[q] <= nums.arr_int[q+1]) || (forall q: Int :: 0 <= q && q + 1 < |nums.arr_int| ==> nums.arr_int[q] >= nums.arr_int[q+1]))"
+      ]
+    }
+  }
+}

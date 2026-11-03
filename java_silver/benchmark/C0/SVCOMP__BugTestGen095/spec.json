@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "BugTestGen095.fun": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null"
+      ]
+    }
+  }
+}

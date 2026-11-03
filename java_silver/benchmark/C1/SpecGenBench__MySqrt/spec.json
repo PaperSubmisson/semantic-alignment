@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "MySqrt.mySqrt": {
+      "requires": [],
+      "ensures": [
+        "(x < 0 ? res == -1 : 0 <= res && res * res <= x && x < (res + 1) * (res + 1))"
+      ]
+    }
+  }
+}

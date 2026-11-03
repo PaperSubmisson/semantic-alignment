@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "Statement.execute": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Statement.executeUpdate": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Statement.executeQuery": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Connection.prepareStatement": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Connection.close": {
+      "requires": []
+    },
+    "Connection.createStatement": {
+      "requires": []
+    },
+    "DriverManager.getConnection": {
+      "requires": [
+        "(connectionString != null) ==> acc(connectionString.str_chars)"
+      ]
+    }
+  }
+}

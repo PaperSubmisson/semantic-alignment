@@ -1,0 +1,20 @@
+{
+  "methods": {
+    "JewelsInStones.numJewelsInStones": {
+      "requires": [
+        "acc(jewels.str_chars, 1/2)",
+        "acc(stones.str_chars, 1/2)"
+      ],
+      "ensures": [
+        "acc(jewels.str_chars, 1/2)",
+        "acc(stones.str_chars, 1/2)",
+        "jewels.str_chars == old(jewels.str_chars)",
+        "stones.str_chars == old(stones.str_chars)",
+        "res == goal_jewels(jewels.str_chars, stones.str_chars)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_jewels(jewels: Seq[Int], stones: Seq[Int]): Int\n  decreases |stones|\n{ |stones| == 0 ? 0 : (stones[0] in jewels ? 1 : 0) + goal_jewels(jewels, stones[1..]) }"
+  ]
+}

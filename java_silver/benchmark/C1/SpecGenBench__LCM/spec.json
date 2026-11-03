@@ -1,0 +1,13 @@
+{
+  "methods": {
+    "LCM.lcm": {
+      "requires": [
+        "-2147483647 <= _j_in_num1 && _j_in_num1 <= 2147483647",
+        "-2147483647 <= _j_in_num2 && _j_in_num2 <= 2147483647"
+      ],
+      "ensures": [
+        "(_j_in_num1 == 0 || _j_in_num2 == 0) ? res == -1 : ((res == -1) == !(exists d: Int :: 0 < d && d <= 2147483647 && d % (_j_in_num1 < 0 ? -_j_in_num1 : _j_in_num1) == 0 && d % (_j_in_num2 < 0 ? -_j_in_num2 : _j_in_num2) == 0) && (res != -1 ==> 0 < res && res <= 2147483647 && res % (_j_in_num1 < 0 ? -_j_in_num1 : _j_in_num1) == 0 && res % (_j_in_num2 < 0 ? -_j_in_num2 : _j_in_num2) == 0 && (forall d: Int :: 0 < d && d % (_j_in_num1 < 0 ? -_j_in_num1 : _j_in_num1) == 0 && d % (_j_in_num2 < 0 ? -_j_in_num2 : _j_in_num2) == 0 ==> res <= d)))"
+      ]
+    }
+  }
+}

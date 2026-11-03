@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StringBuilderChars06.f": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null"
+      ]
+    }
+  }
+}

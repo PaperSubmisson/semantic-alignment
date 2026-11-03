@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "URLDecoder02.f": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "c0_url_valid((arg == null ? Seq(110,117,108,108) : arg.str_chars) ++ Seq(115,111,109,101,45,117,114,108))"
+      ]
+    }
+  }
+}

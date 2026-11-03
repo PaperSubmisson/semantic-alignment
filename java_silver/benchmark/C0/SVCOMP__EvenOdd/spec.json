@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "EvenOdd.isOdd": {
+      "requires": []
+    },
+    "EvenOdd.isEven": {
+      "requires": []
+    }
+  }
+}

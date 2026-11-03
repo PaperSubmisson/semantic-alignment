@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "MulLoop.mulLoop": {
+      "requires": [],
+      "ensures": [
+        "res == a * b"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "MyInteger.MyInteger": {
+      "requires": []
+    },
+    "MyInteger.equals": {
+      "requires": [
+        "(self != null) ==> acc(self.c0_type)",
+        "(obj != null && obj != self) ==> acc(obj.c0_type)",
+        "(self != null) ==> acc(self.MyInteger_value)",
+        "(obj != null && obj != self) ==> acc(obj.MyInteger_value)",
+        "self.c0_type == 7"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Generate verifiable method specifications for the supplied Silver implementation. Return one complete JSON proof object. The verifier is Viper Silicon symbolic execution.
+
+Describe the return value, branch behavior or observable heap updates of every listed specification method using ensures_add. No reference functional postcondition is supplied. Prefer informative relations to true or facts that merely repeat an input condition. Existing assertions, method clauses, definitions and executable statements remain fixed. A verified candidate is a verified generated specification, not a claim that it fully characterizes the implementation.
+
+Root inputs and their baseline resource conditions are fixed: do not add root preconditions. Listed internal methods may receive requires_add; every caller must establish them. All generated postconditions are checked against their method bodies, including recursive implementations. Program correctness is partial correctness unless explicitly stated otherwise.
+
+Add defined functions, heap predicates, ghost values and implemented lemmas when useful. Extra properties must be proved, not assumed. Do not add assume/inhale, axioms, bodyless helpers, unchecked termination exemptions, or assignments to program state. Proof functions and lemmas require checked termination. Use the actual editable IDs. Counterexample values describe a failed proof obligation, not necessarily a reachable execution.

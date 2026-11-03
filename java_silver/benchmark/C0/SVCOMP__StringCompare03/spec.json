@@ -1,0 +1,12 @@
+{
+  "methods": {
+    "StringCompare03.f": {
+      "requires": [
+        "(s3 != null) ==> acc(s3.str_chars)",
+        "(s4 != null && s4 != s3) ==> acc(s4.str_chars)",
+        "s3 != null",
+        "s4 != null"
+      ]
+    }
+  }
+}

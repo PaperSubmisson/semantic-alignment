@@ -1,0 +1,7 @@
+{
+  "methods": {
+    "MultCommutative.mult": {
+      "requires": []
+    }
+  }
+}

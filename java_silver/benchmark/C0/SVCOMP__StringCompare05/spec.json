@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StringCompare05.f": {
+      "requires": [
+        "(string != null) ==> acc(string.str_chars)",
+        "string != null"
+      ]
+    }
+  }
+}

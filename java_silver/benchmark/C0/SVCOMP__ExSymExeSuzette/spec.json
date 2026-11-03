@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Main.method_b": {
+      "requires": []
+    },
+    "Main.f": {
+      "requires": []
+    }
+  }
+}

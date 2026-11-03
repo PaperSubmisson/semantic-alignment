@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "AddTwoLoop.add": {
+      "requires": [],
+      "ensures": [
+        "res == a + b"
+      ]
+    }
+  }
+}

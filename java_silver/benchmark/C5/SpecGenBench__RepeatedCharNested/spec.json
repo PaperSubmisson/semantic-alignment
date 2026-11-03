@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "RepeatedCharNested.repeatedChar": {
+      "requires": [
+        "acc(s.str_chars, 1/2)"
+      ],
+      "ensures": [
+        "acc(s.str_chars, 1/2)",
+        "s.str_chars == old(s.str_chars)",
+        "res == -1 ? !(exists p: Int :: 0 <= p && p < |s.str_chars| && (exists j: Int :: p < j && j < |s.str_chars| && s.str_chars[j] == s.str_chars[p])) : (0 <= res && res < |s.str_chars| && (exists j: Int :: res < j && j < |s.str_chars| && s.str_chars[j] == s.str_chars[res]) && (forall p: Int :: 0 <= p && p < res ==> !(exists j: Int :: p < j && j < |s.str_chars| && s.str_chars[j] == s.str_chars[p])))"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StripLeadingHyphens.stripLeadingHyphens": {
+      "requires": [
+        "(str != null) ==> acc(str.arr_char)",
+        "str != null ==> (|str.arr_char| >= 1 && (str.arr_char[0] == 45 ==> |str.arr_char| >= 2))"
+      ]
+    }
+  }
+}

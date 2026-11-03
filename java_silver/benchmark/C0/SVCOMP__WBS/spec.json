@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "WBS.WBS": {
+      "requires": []
+    },
+    "WBS.update": {
+      "requires": [
+        "(self != null) ==> acc(self.WBS_WBS_Node_WBS_BSCU_SystemModeSelCmd_rlt_PRE)",
+        "(self != null) ==> acc(self.WBS_WBS_Node_WBS_BSCU_rlt_PRE1)",
+        "(self != null) ==> acc(self.WBS_WBS_Node_WBS_rlt_PRE2)",
+        "(self != null) ==> acc(self.WBS_Nor_Pressure)",
+        "(self != null) ==> acc(self.WBS_Alt_Pressure)",
+        "(self != null) ==> acc(self.WBS_Sys_Mode)"
+      ]
+    }
+  }
+}

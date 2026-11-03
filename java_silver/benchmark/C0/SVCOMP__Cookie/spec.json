@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "Cookie.Cookie": {
+      "requires": []
+    },
+    "Cookie.getName": {
+      "requires": [
+        "(self != null) ==> acc(self.Cookie_name)",
+        "(self != null) ==> acc(self.Cookie_value)"
+      ]
+    },
+    "Cookie.getValue": {
+      "requires": [
+        "(self != null) ==> acc(self.Cookie_name)",
+        "(self != null) ==> acc(self.Cookie_value)"
+      ]
+    }
+  }
+}

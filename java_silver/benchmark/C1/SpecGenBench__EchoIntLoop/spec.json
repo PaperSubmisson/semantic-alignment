@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "EchoIntLoop.echo": {
+      "requires": [],
+      "ensures": [
+        "res == (x < 0 ? 0 : x)"
+      ]
+    }
+  }
+}

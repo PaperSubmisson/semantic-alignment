@@ -1,0 +1,11 @@
+{
+  "methods": {
+    "StringConstructors03.f": {
+      "requires": [
+        "(arg0 != null) ==> acc(arg0.str_chars)",
+        "(arg1 != null && arg1 != arg0) ==> acc(arg1.str_chars)",
+        "arg0 != null"
+      ]
+    }
+  }
+}

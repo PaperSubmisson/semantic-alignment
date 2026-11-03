@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "Perimeter.Perimeter/short": {
+      "requires": []
+    },
+    "Perimeter.Perimeter/int": {
+      "requires": []
+    },
+    "Perimeter.Perimeter/long": {
+      "requires": []
+    },
+    "Perimeter.Perimeter/int,int": {
+      "requires": []
+    },
+    "Perimeter.Perimeter/int,int,int": {
+      "requires": []
+    },
+    "Perimeter.Perimeter/int,int,int,int": {
+      "requires": []
+    }
+  }
+}

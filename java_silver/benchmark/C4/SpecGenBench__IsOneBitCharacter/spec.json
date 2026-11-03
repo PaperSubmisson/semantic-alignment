@@ -1,0 +1,18 @@
+{
+  "methods": {
+    "IsOneBitCharacter.isOneBitCharacter": {
+      "requires": [
+        "acc(bits.arr_int, 1/2)",
+        "forall q: Int :: 0 <= q && q < |bits.arr_int| ==> bits.arr_int[q] == 0 || bits.arr_int[q] == 1"
+      ],
+      "ensures": [
+        "acc(bits.arr_int, 1/2)",
+        "bits.arr_int == old(bits.arr_int)",
+        "res == goal_last_bit(bits.arr_int)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_last_bit(s: Seq[Int]): Bool\n  decreases |s|\n{ |s| == 0 ? false : (|s| == 1 ? true : goal_last_bit(s[(s[0] == 0 ? 1 : 2)..])) }"
+  ]
+}

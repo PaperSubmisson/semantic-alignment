@@ -1,0 +1,13 @@
+{
+  "methods": {
+    "MyPower.power": {
+      "requires": [],
+      "ensures": [
+        "res == goal_pow(x, n > 0 ? n : 0)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_pow(x: Int, n: Int): Int\n  requires n >= 0\n  decreases n\n{ n == 0 ? 1 : x * goal_pow(x, n - 1) }"
+  ]
+}

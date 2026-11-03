@@ -1,0 +1,13 @@
+{
+  "base_url": "https://api.openai.com/v1",
+  "model": "YOUR_MODEL",
+  "api_key_env": "LLM_API_KEY",
+  "temperature": 0.4,
+  "max_tokens": 8192,
+  "request_timeout": 120,
+  "tools": {
+    "java": "java",
+    "javac": "javac",
+    "vercors_dir": "/path/to/vercors-2.4.0"
+  }
+}

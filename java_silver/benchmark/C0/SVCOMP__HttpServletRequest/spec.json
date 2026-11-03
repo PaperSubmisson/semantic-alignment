@@ -1,0 +1,115 @@
+{
+  "methods": {
+    "HttpServletRequest.setTaintedValue": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "(value != null) ==> acc(value.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getParameterValues": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "(name != null) ==> acc(name.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getAuthType": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getCookies": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getHeader": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "(string != null) ==> acc(string.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getHeaders": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "(string != null) ==> acc(string.str_chars)",
+        "self.HttpServletRequest_tainted != null && self.HttpServletRequest_tainted != string ==> acc(self.HttpServletRequest_tainted.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getHeaderNames": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "self.HttpServletRequest_tainted != null ==> acc(self.HttpServletRequest_tainted.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getQueryString": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getRemoteUser": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getRequestURL": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "self.HttpServletRequest_tainted != null",
+        "acc(self.HttpServletRequest_tainted.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getParameter": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)",
+        "(string != null) ==> acc(string.str_chars)"
+      ]
+    },
+    "HttpServletRequest.getParameterNames": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getParameterMap": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getProtocol": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "HttpServletRequest.getScheme": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpServletRequest_cookie)",
+        "(self != null) ==> acc(self.HttpServletRequest_tainted)"
+      ]
+    },
+    "Cookie.getName": {
+      "requires": [
+        "(self != null) ==> acc(self.Cookie_name)",
+        "(self != null) ==> acc(self.Cookie_value)"
+      ]
+    },
+    "Cookie.getValue": {
+      "requires": [
+        "(self != null) ==> acc(self.Cookie_name)",
+        "(self != null) ==> acc(self.Cookie_value)"
+      ]
+    }
+  }
+}

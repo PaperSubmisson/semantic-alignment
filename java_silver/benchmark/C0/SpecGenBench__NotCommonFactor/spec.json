@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "NotCommonFactor.notCommonFactor": {
+      "requires": [
+        "factor != 0"
+      ]
+    }
+  }
+}

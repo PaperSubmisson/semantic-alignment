@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "CharSequenceBug.main": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    }
+  }
+}

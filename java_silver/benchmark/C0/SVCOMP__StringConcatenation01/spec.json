@@ -1,0 +1,12 @@
+{
+  "methods": {
+    "StringConcatenation01.f": {
+      "requires": [
+        "(arg1 != null) ==> acc(arg1.str_chars)",
+        "(arg2 != null && arg2 != arg1) ==> acc(arg2.str_chars)",
+        "arg1 != null",
+        "arg2 != null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "ThreeConsecutiveOdds.threeConsecutiveOdds": {
+      "requires": [
+        "acc(arr.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(arr.arr_int, 1/2)",
+        "arr.arr_int == old(arr.arr_int)",
+        "res == (exists q: Int :: 0 <= q && q + 2 < |arr.arr_int| && arr.arr_int[q] % 2 != 0 && arr.arr_int[q+1] % 2 != 0 && arr.arr_int[q+2] % 2 != 0)"
+      ]
+    }
+  }
+}

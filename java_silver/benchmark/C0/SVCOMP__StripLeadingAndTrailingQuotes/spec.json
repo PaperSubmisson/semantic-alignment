@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StripLeadingAndTrailingQuotes.stripLeadingAndTrailingQuotes": {
+      "requires": [
+        "(_j_in_str != null) ==> acc(_j_in_str.str_chars)",
+        "_j_in_str != null"
+      ]
+    }
+  }
+}

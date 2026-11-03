@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Absolute.Absolute/int": {
+      "requires": []
+    },
+    "Absolute.Absolute/long": {
+      "requires": []
+    }
+  }
+}

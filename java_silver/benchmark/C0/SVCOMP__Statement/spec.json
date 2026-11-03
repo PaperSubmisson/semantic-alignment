@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "Statement.execute": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Statement.executeUpdate": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    },
+    "Statement.executeQuery": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)",
+        "s != null"
+      ]
+    }
+  }
+}

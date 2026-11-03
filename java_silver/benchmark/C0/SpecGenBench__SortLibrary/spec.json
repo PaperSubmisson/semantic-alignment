@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "SortLibrary.sort": {
+      "requires": [
+        "(arr != null) ==> acc(arr.arr_int)",
+        "arr != null"
+      ]
+    }
+  }
+}

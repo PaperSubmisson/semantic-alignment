@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "ReverseString.reverseString": {
+      "requires": [
+        "acc(s.arr_char)"
+      ],
+      "ensures": [
+        "acc(s.arr_char)",
+        "|s.arr_char| == old(|s.arr_char|)",
+        "forall q: Int :: 0 <= q && q < |s.arr_char| ==> s.arr_char[q] == old(s.arr_char[|s.arr_char| - 1 - q])"
+      ]
+    }
+  }
+}

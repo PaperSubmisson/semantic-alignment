@@ -1,0 +1,13 @@
+{
+  "methods": {
+    "iarith2.i": {
+      "requires": []
+    },
+    "iarith2.l": {
+      "requires": []
+    },
+    "iarith2.s": {
+      "requires": []
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Hanoi.hanoi": {
+      "requires": []
+    },
+    "Hanoi.applyHanoi": {
+      "requires": []
+    }
+  }
+}

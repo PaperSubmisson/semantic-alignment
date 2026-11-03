@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "PassPillow.passPillow": {
+      "requires": [
+        "n > 1",
+        "_j_in_time >= 0"
+      ]
+    }
+  }
+}

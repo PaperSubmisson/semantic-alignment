@@ -1,0 +1,47 @@
+{
+  "methods": {
+    "MatrixMul.multiply": {
+      "requires": [
+        "acc(a.arr_ref, 1/2)",
+        "acc(b.arr_ref, 1/2)",
+        "|a.arr_ref| >= 2 && |b.arr_ref| >= 2",
+        "acc(a.arr_ref[0].arr_int, 1/4)",
+        "|a.arr_ref[0].arr_int| >= 2",
+        "acc(a.arr_ref[1].arr_int, 1/4)",
+        "|a.arr_ref[1].arr_int| >= 2",
+        "acc(b.arr_ref[0].arr_int, 1/4)",
+        "|b.arr_ref[0].arr_int| >= 2",
+        "acc(b.arr_ref[1].arr_int, 1/4)",
+        "|b.arr_ref[1].arr_int| >= 2"
+      ],
+      "ensures": [
+        "acc(a.arr_ref, 1/2)",
+        "acc(b.arr_ref, 1/2)",
+        "a.arr_ref == old(a.arr_ref)",
+        "b.arr_ref == old(b.arr_ref)",
+        "|a.arr_ref| >= 2 && |b.arr_ref| >= 2",
+        "acc(a.arr_ref[0].arr_int, 1/4)",
+        "|a.arr_ref[0].arr_int| >= 2",
+        "a.arr_ref[0].arr_int == old(a.arr_ref[0].arr_int)",
+        "acc(a.arr_ref[1].arr_int, 1/4)",
+        "|a.arr_ref[1].arr_int| >= 2",
+        "a.arr_ref[1].arr_int == old(a.arr_ref[1].arr_int)",
+        "acc(b.arr_ref[0].arr_int, 1/4)",
+        "|b.arr_ref[0].arr_int| >= 2",
+        "b.arr_ref[0].arr_int == old(b.arr_ref[0].arr_int)",
+        "acc(b.arr_ref[1].arr_int, 1/4)",
+        "|b.arr_ref[1].arr_int| >= 2",
+        "b.arr_ref[1].arr_int == old(b.arr_ref[1].arr_int)",
+        "acc(res.arr_ref)",
+        "|res.arr_ref| == 2",
+        "acc(res.arr_ref[0].arr_int) && acc(res.arr_ref[1].arr_int)",
+        "|res.arr_ref[0].arr_int| == 2 && |res.arr_ref[1].arr_int| == 2",
+        "res != a && res != b && res.arr_ref[0] != res.arr_ref[1]",
+        "res.arr_ref[0].arr_int[0] == old(a.arr_ref[0].arr_int[0]) * old(b.arr_ref[0].arr_int[0]) + old(a.arr_ref[0].arr_int[1]) * old(b.arr_ref[1].arr_int[0])",
+        "res.arr_ref[0].arr_int[1] == old(a.arr_ref[0].arr_int[0]) * old(b.arr_ref[0].arr_int[1]) + old(a.arr_ref[0].arr_int[1]) * old(b.arr_ref[1].arr_int[1])",
+        "res.arr_ref[1].arr_int[0] == old(a.arr_ref[1].arr_int[0]) * old(b.arr_ref[0].arr_int[0]) + old(a.arr_ref[1].arr_int[1]) * old(b.arr_ref[1].arr_int[0])",
+        "res.arr_ref[1].arr_int[1] == old(a.arr_ref[1].arr_int[0]) * old(b.arr_ref[0].arr_int[1]) + old(a.arr_ref[1].arr_int[1]) * old(b.arr_ref[1].arr_int[1])"
+      ]
+    }
+  }
+}

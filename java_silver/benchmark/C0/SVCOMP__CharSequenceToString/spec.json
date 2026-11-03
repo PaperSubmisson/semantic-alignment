@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "CharSequenceToString.main": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null"
+      ]
+    }
+  }
+}

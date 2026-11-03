@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Return100Nested.return100": {
+      "requires": [],
+      "ensures": [
+        "res == 100"
+      ]
+    }
+  }
+}

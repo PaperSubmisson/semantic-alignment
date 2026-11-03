@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Main.f": {
+      "requires": [
+        "(arg != null) ==> acc(arg.c0_box)",
+        "arg != null"
+      ]
+    }
+  }
+}

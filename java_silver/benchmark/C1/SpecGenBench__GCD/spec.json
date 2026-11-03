@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "GCD.gcd": {
+      "requires": [],
+      "ensures": [
+        "(_j_in_num1 == 0 && _j_in_num2 == 0) ? res == -1 : (res > 0 && (_j_in_num1 < 0 ? -_j_in_num1 : _j_in_num1) % res == 0 && (_j_in_num2 < 0 ? -_j_in_num2 : _j_in_num2) % res == 0 && (forall d: Int :: d > 0 && (_j_in_num1 < 0 ? -_j_in_num1 : _j_in_num1) % d == 0 && (_j_in_num2 < 0 ? -_j_in_num2 : _j_in_num2) % d == 0 ==> d <= res))"
+      ]
+    }
+  }
+}

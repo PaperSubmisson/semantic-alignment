@@ -1,0 +1,20 @@
+{
+  "methods": {
+    "IsBoomerang.isBoomerang": {
+      "requires": [
+        "(points != null) ==> acc(points.arr_ref)",
+        "points != null",
+        "|points.arr_ref| == 3",
+        "points.arr_ref[0] != null",
+        "acc(points.arr_ref[0].arr_int)",
+        "points.arr_ref[1] != null",
+        "points.arr_ref[1] != points.arr_ref[0] ==> acc(points.arr_ref[1].arr_int)",
+        "points.arr_ref[2] != null",
+        "(points.arr_ref[2] != points.arr_ref[0] && points.arr_ref[2] != points.arr_ref[1]) ==> acc(points.arr_ref[2].arr_int)",
+        "|points.arr_ref[0].arr_int| == 2",
+        "|points.arr_ref[1].arr_int| == 2",
+        "|points.arr_ref[2].arr_int| == 2"
+      ]
+    }
+  }
+}

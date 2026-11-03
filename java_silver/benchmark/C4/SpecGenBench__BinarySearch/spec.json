@@ -1,0 +1,15 @@
+{
+  "methods": {
+    "BinarySearch.Binary": {
+      "requires": [
+        "acc(arr.arr_int, 1/2)",
+        "forall q: Int, p: Int :: 0 <= q && q < p && p < |arr.arr_int| ==> arr.arr_int[q] <= arr.arr_int[p]"
+      ],
+      "ensures": [
+        "acc(arr.arr_int, 1/2)",
+        "arr.arr_int == old(arr.arr_int)",
+        "res == -1 ? !(key in arr.arr_int) : (0 <= res && res < |arr.arr_int| && arr.arr_int[res] == key)"
+      ]
+    }
+  }
+}

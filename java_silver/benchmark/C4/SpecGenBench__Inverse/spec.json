@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "Inverse.Inverse": {
+      "requires": [
+        "acc(x.arr_int, 1/2)",
+        "acc(y.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(x.arr_int, 1/2)",
+        "acc(y.arr_int, 1/2)",
+        "x.arr_int == old(x.arr_int)",
+        "y.arr_int == old(y.arr_int)",
+        "res == (|x.arr_int| == |y.arr_int| && (forall q: Int :: 0 <= q && q < |x.arr_int| ==> x.arr_int[q] == y.arr_int[|x.arr_int| - 1 - q]))"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "methods": {
+    "PrimeCheck.isPrime": {
+      "requires": [
+        "a > 1"
+      ],
+      "ensures": [
+        "res == goal_prime(a)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_prime(n: Int): Bool\n{ n >= 2 && (forall d: Int :: 2 <= d && d < n ==> n % d != 0) }"
+  ]
+}

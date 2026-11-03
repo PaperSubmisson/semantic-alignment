@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "FindFirstZero.FindFirstZero": {
+      "requires": [
+        "acc(x.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(x.arr_int, 1/2)",
+        "x.arr_int == old(x.arr_int)",
+        "res == -1 ? !(0 in x.arr_int) : (0 <= res && res < |x.arr_int| && x.arr_int[res] == 0 && (forall q: Int :: 0 <= q && q < res ==> x.arr_int[q] != 0))"
+      ]
+    }
+  }
+}

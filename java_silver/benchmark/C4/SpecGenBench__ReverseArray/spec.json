@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "ReverseArray.reverse": {
+      "requires": [
+        "acc(original.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(original.arr_int, 1/2)",
+        "original.arr_int == old(original.arr_int)",
+        "acc(res.arr_int)",
+        "res != original",
+        "|res.arr_int| == |original.arr_int|",
+        "forall q: Int :: 0 <= q && q < |res.arr_int| ==> res.arr_int[q] == old(original.arr_int[|original.arr_int| - 1 - q])"
+      ]
+    }
+  }
+}

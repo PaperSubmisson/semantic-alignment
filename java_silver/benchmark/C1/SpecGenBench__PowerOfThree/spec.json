@@ -1,0 +1,13 @@
+{
+  "methods": {
+    "PowerOfThree.isPowerOfThree": {
+      "requires": [],
+      "ensures": [
+        "res == goal_power(n, 3)"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_power(n: Int, b: Int): Bool\n  requires b == 2 || b == 3 || b == 4\n  decreases n > 0 ? n : 0\n{ n == 1 || (n > 1 && n % b == 0 && goal_power(b == 2 ? n / 2 : (b == 3 ? n / 3 : n / 4), b)) }"
+  ]
+}

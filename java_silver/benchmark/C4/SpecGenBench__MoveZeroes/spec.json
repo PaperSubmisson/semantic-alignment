@@ -1,0 +1,18 @@
+{
+  "methods": {
+    "MoveZeroes.moveZeroes": {
+      "requires": [
+        "acc(nums.arr_int)"
+      ],
+      "ensures": [
+        "acc(nums.arr_int)",
+        "|nums.arr_int| == old(|nums.arr_int|)",
+        "forall q: Int :: 0 <= q && q < |goal_nonzero(old(nums.arr_int))| ==> nums.arr_int[q] == goal_nonzero(old(nums.arr_int))[q]",
+        "forall q: Int :: |goal_nonzero(old(nums.arr_int))| <= q && q < |nums.arr_int| ==> nums.arr_int[q] == 0"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_nonzero(s: Seq[Int]): Seq[Int]\n  ensures |result| <= |s|\n  decreases |s|\n{ |s| == 0 ? Seq[Int]() : (s[0] == 0 ? Seq[Int]() : Seq(s[0])) ++ goal_nonzero(s[1..]) }"
+  ]
+}

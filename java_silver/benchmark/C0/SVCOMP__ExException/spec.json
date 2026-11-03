@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "ExException.test": {
+      "requires": [
+        "secret > 0"
+      ]
+    }
+  }
+}

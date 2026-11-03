@@ -1,0 +1,12 @@
+{
+  "methods": {
+    "Node.swapNode": {
+      "requires": [
+        "(self != null) ==> acc(self.Node_elem)",
+        "(self != null) ==> acc(self.Node_next)",
+        "self.Node_next != null && self.Node_next != self ==> acc(self.Node_next.Node_elem)",
+        "self.Node_next != null && self.Node_next != self ==> acc(self.Node_next.Node_next)"
+      ]
+    }
+  }
+}

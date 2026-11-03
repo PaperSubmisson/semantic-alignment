@@ -1,0 +1,33 @@
+{
+  "methods": {
+    "HttpSession.getAttribute": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpSession_map)",
+        "(name != null) ==> acc(name.str_chars)",
+        "self.HttpSession_map != null",
+        "acc(self.HttpSession_map.c0_map_keys)",
+        "acc(self.HttpSession_map.c0_map_values)",
+        "|self.HttpSession_map.c0_map_keys| == |self.HttpSession_map.c0_map_values|"
+      ]
+    },
+    "HttpSession.getAttributeNames": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpSession_map)",
+        "self.HttpSession_map != null",
+        "acc(self.HttpSession_map.c0_map_keys)",
+        "acc(self.HttpSession_map.c0_map_values)",
+        "|self.HttpSession_map.c0_map_keys| == |self.HttpSession_map.c0_map_values|"
+      ]
+    },
+    "HttpSession.setAttribute": {
+      "requires": [
+        "(self != null) ==> acc(self.HttpSession_map)",
+        "(name != null) ==> acc(name.str_chars)",
+        "self.HttpSession_map != null",
+        "acc(self.HttpSession_map.c0_map_keys)",
+        "acc(self.HttpSession_map.c0_map_values)",
+        "|self.HttpSession_map.c0_map_keys| == |self.HttpSession_map.c0_map_values|"
+      ]
+    }
+  }
+}

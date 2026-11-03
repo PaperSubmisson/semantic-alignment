@@ -1,0 +1,12 @@
+{
+  "methods": {
+    "calc.fun": {
+      "requires": [
+        "(args != null) ==> acc(args.arr_ref)",
+        "args != null",
+        "|args.arr_ref| >= 2 && args.arr_ref[0] != null ==> acc(args.arr_ref[0].str_chars)",
+        "|args.arr_ref| >= 2 && args.arr_ref[1] != null && args.arr_ref[1] != args.arr_ref[0] ==> acc(args.arr_ref[1].str_chars)"
+      ]
+    }
+  }
+}

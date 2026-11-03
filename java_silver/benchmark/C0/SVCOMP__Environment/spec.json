@@ -1,0 +1,46 @@
+{
+  "methods": {
+    "Environment.lowerWaterLevel": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    },
+    "Environment.waterRise": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    },
+    "Environment.changeMethaneLevel": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    },
+    "Environment.isMethaneLevelCritical": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    },
+    "Environment.toString": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    },
+    "Environment.getWaterLevel": {
+      "requires": [
+        "(self != null) ==> acc(self.Environment_waterLevel)",
+        "(self != null) ==> acc(self.Environment_methaneLevelCritical)",
+        "0 <= self.Environment_waterLevel && self.Environment_waterLevel < 3"
+      ]
+    }
+  }
+}

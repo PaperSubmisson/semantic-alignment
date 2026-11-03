@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "AddLoopFor.addLoop": {
+      "requires": [],
+      "ensures": [
+        "res == x + y"
+      ]
+    }
+  }
+}

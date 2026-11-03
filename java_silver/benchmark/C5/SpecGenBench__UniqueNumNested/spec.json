@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "UniqueNumNested.uniqueNum": {
+      "requires": [
+        "acc(arr.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(arr.arr_int, 1/2)",
+        "arr.arr_int == old(arr.arr_int)",
+        "res == -1 ? !(exists p: Int :: 0 <= p && p < |arr.arr_int| && (forall j: Int :: 0 <= j && j < |arr.arr_int| && j != p ==> arr.arr_int[j] != arr.arr_int[p])) : (0 <= res && res < |arr.arr_int| && (forall j: Int :: 0 <= j && j < |arr.arr_int| && j != res ==> arr.arr_int[j] != arr.arr_int[res]) && (forall p: Int :: 0 <= p && p < res ==> !(forall j: Int :: 0 <= j && j < |arr.arr_int| && j != p ==> arr.arr_int[j] != arr.arr_int[p])))"
+      ]
+    }
+  }
+}

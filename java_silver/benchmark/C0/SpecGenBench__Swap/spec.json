@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Swap.swap": {
+      "requires": [
+        "(arr != null) ==> acc(arr.arr_int)",
+        "arr != null"
+      ]
+    }
+  }
+}

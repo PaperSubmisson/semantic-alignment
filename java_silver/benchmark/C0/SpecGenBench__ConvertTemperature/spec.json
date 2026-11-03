@@ -1,0 +1,7 @@
+{
+  "methods": {
+    "ConvertTemperature.convertTemperature": {
+      "requires": []
+    }
+  }
+}

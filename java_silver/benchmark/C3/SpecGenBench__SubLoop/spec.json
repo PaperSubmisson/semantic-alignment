@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "SubLoop.subLoop": {
+      "requires": [],
+      "ensures": [
+        "res == x - y"
+      ]
+    }
+  }
+}

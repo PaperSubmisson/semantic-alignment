@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "BubbleSort.bubbleSort": {
+      "requires": [
+        "acc(arr.arr_int)"
+      ],
+      "ensures": [
+        "acc(arr.arr_int)",
+        "|arr.arr_int| == old(|arr.arr_int|)",
+        "forall q: Int, p: Int :: 0 <= q && q < p && p < |arr.arr_int| ==> arr.arr_int[q] <= arr.arr_int[p]",
+        "forall v: Int :: goal_count(arr.arr_int, v) == goal_count(old(arr.arr_int), v)",
+        "res == arr"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_count(s: Seq[Int], v: Int): Int\n  decreases |s|\n{ |s| == 0 ? 0 : (s[0] == v ? 1 : 0) + goal_count(s[1..], v) }"
+  ]
+}

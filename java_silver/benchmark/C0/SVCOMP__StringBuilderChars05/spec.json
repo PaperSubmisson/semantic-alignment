@@ -1,0 +1,11 @@
+{
+  "methods": {
+    "StringBuilderChars05.f": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null",
+        "|arg.str_chars| >= 7"
+      ]
+    }
+  }
+}

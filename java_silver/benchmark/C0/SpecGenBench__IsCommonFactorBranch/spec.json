@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "IsCommonFactorBranch.isCommonFactor": {
+      "requires": [
+        "factor != 0"
+      ]
+    }
+  }
+}

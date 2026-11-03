@@ -1,0 +1,46 @@
+{
+  "methods": {
+    "ValidateInput01.validateFirstName": {
+      "requires": [
+        "(firstName != null) ==> acc(firstName.str_chars)",
+        "firstName != null"
+      ]
+    },
+    "ValidateInput01.validateLastName": {
+      "requires": [
+        "(lastName != null) ==> acc(lastName.str_chars)",
+        "lastName != null"
+      ]
+    },
+    "ValidateInput01.validateAddress": {
+      "requires": [
+        "(address != null) ==> acc(address.str_chars)",
+        "address != null"
+      ]
+    },
+    "ValidateInput01.validateCity": {
+      "requires": [
+        "(city != null) ==> acc(city.str_chars)",
+        "city != null"
+      ]
+    },
+    "ValidateInput01.validateState": {
+      "requires": [
+        "(state != null) ==> acc(state.str_chars)",
+        "state != null"
+      ]
+    },
+    "ValidateInput01.validateZip": {
+      "requires": [
+        "(zip != null) ==> acc(zip.str_chars)",
+        "zip != null"
+      ]
+    },
+    "ValidateInput01.validatePhone": {
+      "requires": [
+        "(phone != null) ==> acc(phone.str_chars)",
+        "phone != null"
+      ]
+    }
+  }
+}

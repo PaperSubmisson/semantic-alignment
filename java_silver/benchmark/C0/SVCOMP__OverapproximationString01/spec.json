@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "OverapproximationString01.foo": {
+      "requires": [
+        "(s != null) ==> acc(s.str_chars)"
+      ]
+    }
+  }
+}

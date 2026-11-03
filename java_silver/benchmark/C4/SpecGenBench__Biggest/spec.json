@@ -1,0 +1,14 @@
+{
+  "methods": {
+    "Biggest.biggest": {
+      "requires": [
+        "acc(a.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(a.arr_int, 1/2)",
+        "a.arr_int == old(a.arr_int)",
+        "|a.arr_int| == 0 ? res == -1 : (0 <= res && res < |a.arr_int| && (forall q: Int :: 0 <= q && q < |a.arr_int| ==> a.arr_int[res] >= a.arr_int[q]))"
+      ]
+    }
+  }
+}

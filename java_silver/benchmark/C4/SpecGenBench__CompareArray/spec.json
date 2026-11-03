@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "CompareArray.arrcmp": {
+      "requires": [
+        "acc(a.arr_int, 1/2)",
+        "acc(b.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(a.arr_int, 1/2)",
+        "acc(b.arr_int, 1/2)",
+        "a.arr_int == old(a.arr_int)",
+        "b.arr_int == old(b.arr_int)",
+        "res == (|a.arr_int| == |b.arr_int| && (forall q: Int :: 0 <= q && q < |a.arr_int| ==> a.arr_int[q] == b.arr_int[q]))"
+      ]
+    }
+  }
+}

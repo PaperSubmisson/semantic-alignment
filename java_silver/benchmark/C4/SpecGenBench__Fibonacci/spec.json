@@ -1,0 +1,13 @@
+{
+  "methods": {
+    "Fibonacci.fibCompute": {
+      "requires": [],
+      "ensures": [
+        "res == (n < 0 ? -1 : goal_fib(n))"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_fib(n: Int): Int\n  requires n >= 0\n  decreases n\n{ n < 2 ? n : goal_fib(n - 1) + goal_fib(n - 2) }"
+  ]
+}

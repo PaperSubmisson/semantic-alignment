@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "IntCube.cubeOf": {
+      "requires": [],
+      "ensures": [
+        "res == _j_in_x * _j_in_x * _j_in_x"
+      ]
+    }
+  }
+}

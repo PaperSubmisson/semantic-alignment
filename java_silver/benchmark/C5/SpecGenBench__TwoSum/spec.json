@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "TwoSum.twoSum": {
+      "requires": [
+        "acc(nums.arr_int, 1/2)"
+      ],
+      "ensures": [
+        "acc(nums.arr_int, 1/2)",
+        "nums.arr_int == old(nums.arr_int)",
+        "acc(res.arr_int)",
+        "res != nums",
+        "|res.arr_int| == 0 || |res.arr_int| == 2",
+        "|res.arr_int| == 0 ? !(exists p: Int, q: Int :: 0 <= p && p < q && q < |nums.arr_int| && nums.arr_int[p] + nums.arr_int[q] == target) : (0 <= res.arr_int[0] && res.arr_int[0] < res.arr_int[1] && res.arr_int[1] < |nums.arr_int| && nums.arr_int[res.arr_int[0]] + nums.arr_int[res.arr_int[1]] == target)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "methods": {
+    "IsCommonFactor.isCommonFactor": {
+      "requires": [
+        "factor != 0"
+      ]
+    }
+  }
+}

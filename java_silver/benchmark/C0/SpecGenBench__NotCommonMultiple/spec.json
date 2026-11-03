@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "NotCommonMultiple.NotCommonMultiple": {
+      "requires": [
+        "a != 0",
+        "b != 0"
+      ]
+    }
+  }
+}

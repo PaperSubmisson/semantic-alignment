@@ -1,0 +1,15 @@
+{
+  "methods": {
+    "SetZero.SetZero": {
+      "requires": [
+        "acc(a.arr_int)",
+        "iBegin < iEnd ==> 0 <= iBegin && iEnd <= |a.arr_int|"
+      ],
+      "ensures": [
+        "acc(a.arr_int)",
+        "|a.arr_int| == old(|a.arr_int|)",
+        "forall q: Int :: 0 <= q && q < |a.arr_int| ==> a.arr_int[q] == (iBegin <= q && q < iEnd ? 0 : old(a.arr_int[q]))"
+      ]
+    }
+  }
+}

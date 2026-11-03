@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "Primes.mult": {
+      "requires": []
+    },
+    "Primes.is_prime": {
+      "requires": []
+    }
+  }
+}

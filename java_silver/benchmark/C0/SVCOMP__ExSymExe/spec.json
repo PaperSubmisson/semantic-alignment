@@ -1,0 +1,29 @@
+{
+  "methods": {
+    "Main.testa": {
+      "requires": [
+        "(a != null) ==> acc(a.arr_bool)",
+        "a != null",
+        "|a.arr_bool| >= 2"
+      ]
+    },
+    "Main.test5": {
+      "requires": []
+    },
+    "Main.test3": {
+      "requires": []
+    },
+    "Main.test4": {
+      "requires": []
+    },
+    "Main.test1": {
+      "requires": []
+    },
+    "Main.test": {
+      "requires": []
+    },
+    "Main.test2": {
+      "requires": []
+    }
+  }
+}

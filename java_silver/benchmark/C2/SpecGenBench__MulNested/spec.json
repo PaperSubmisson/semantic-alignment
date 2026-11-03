@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "MulNested.mulNested": {
+      "requires": [],
+      "ensures": [
+        "res == x * y"
+      ]
+    }
+  }
+}

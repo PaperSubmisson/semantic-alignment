@@ -1,0 +1,7 @@
+{
+  "methods": {
+    "PowerOfFour.isPowerOfFour": {
+      "requires": []
+    }
+  }
+}

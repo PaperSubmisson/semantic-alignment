@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "char1.fun": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null"
+      ]
+    }
+  }
+}

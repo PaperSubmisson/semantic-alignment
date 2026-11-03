@@ -1,0 +1,12 @@
+{
+  "methods": {
+    "StringContains01.f": {
+      "requires": [
+        "(ab != null) ==> acc(ab.str_chars)",
+        "(b != null && b != ab) ==> acc(b.str_chars)",
+        "ab != null",
+        "b != null"
+      ]
+    }
+  }
+}

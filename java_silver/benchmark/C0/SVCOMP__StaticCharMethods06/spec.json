@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "StaticCharMethods06.main": {
+      "requires": [
+        "(arg != null) ==> acc(arg.str_chars)",
+        "arg != null"
+      ]
+    }
+  }
+}

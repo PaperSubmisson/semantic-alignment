@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "DigitRoot.digitRoot": {
+      "requires": [],
+      "ensures": [
+        "res == (_j_in_num < 10 ? _j_in_num : 1 + (_j_in_num - 1) % 9)"
+      ]
+    }
+  }
+}

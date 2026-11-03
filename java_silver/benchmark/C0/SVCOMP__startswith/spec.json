@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "startswith.doPost": {
+      "requires": [
+        "(request != null) ==> acc(request.str_chars)",
+        "request != null"
+      ]
+    }
+  }
+}

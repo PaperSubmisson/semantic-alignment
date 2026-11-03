@@ -1,0 +1,25 @@
+{
+  "methods": {
+    "NextGreaterElem.nextGreaterElement": {
+      "requires": [
+        "acc(nums1.arr_int, 1/2)",
+        "acc(nums2.arr_int, 1/2)",
+        "forall p: Int, q: Int :: 0 <= p && p < q && q < |nums2.arr_int| ==> nums2.arr_int[p] != nums2.arr_int[q]"
+      ],
+      "ensures": [
+        "acc(nums1.arr_int, 1/2)",
+        "acc(nums2.arr_int, 1/2)",
+        "nums1.arr_int == old(nums1.arr_int)",
+        "nums2.arr_int == old(nums2.arr_int)",
+        "acc(res.arr_int)",
+        "res != nums1 && res != nums2",
+        "|res.arr_int| == |nums1.arr_int|",
+        "forall q: Int :: 0 <= q && q < |res.arr_int| ==> res.arr_int[q] == goal_next(nums2.arr_int, nums1.arr_int[q])"
+      ]
+    }
+  },
+  "definitions": [
+    "function goal_greater(s: Seq[Int], v: Int): Int\n  decreases |s|\n{ |s| == 0 ? -1 : (s[0] > v ? s[0] : goal_greater(s[1..], v)) }",
+    "function goal_next(s: Seq[Int], v: Int): Int\n  decreases |s|\n{ |s| == 0 ? -1 : (s[0] == v ? goal_greater(s[1..], v) : goal_next(s[1..], v)) }"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "TransposeMatrix.transposeMat": {
+      "requires": [
+        "acc(matrix.arr_ref, 1/2)",
+        "|matrix.arr_ref| > 0",
+        "forall rr: Ref :: { rr.arr_int } rr in matrix.arr_ref ==> acc(rr.arr_int, 1/2)",
+        "forall q: Int :: 0 <= q && q < |matrix.arr_ref| ==> |matrix.arr_ref[q].arr_int| == |matrix.arr_ref[0].arr_int|"
+      ],
+      "ensures": [
+        "acc(matrix.arr_ref, 1/2)",
+        "|matrix.arr_ref| > 0",
+        "forall rr: Ref :: { rr.arr_int } rr in matrix.arr_ref ==> acc(rr.arr_int, 1/2)",
+        "forall q: Int :: 0 <= q && q < |matrix.arr_ref| ==> |matrix.arr_ref[q].arr_int| == |matrix.arr_ref[0].arr_int|",
+        "matrix.arr_ref == old(matrix.arr_ref)",
+        "forall q: Int :: 0 <= q && q < |matrix.arr_ref| ==> matrix.arr_ref[q].arr_int == old(matrix.arr_ref[q].arr_int)",
+        "acc(res.arr_ref)",
+        "|res.arr_ref| == |matrix.arr_ref[0].arr_int|",
+        "forall rr: Ref :: { rr.arr_int } rr in res.arr_ref ==> acc(rr.arr_int)",
+        "forall q: Int :: 0 <= q && q < |res.arr_ref| ==> |res.arr_ref[q].arr_int| == |matrix.arr_ref|",
+        "forall q: Int, p: Int :: 0 <= q && q < |res.arr_ref| && 0 <= p && p < |matrix.arr_ref| ==> res.arr_ref[q].arr_int[p] == old(matrix.arr_ref[p].arr_int[q])",
+        "forall q: Int, p: Int :: 0 <= q && q < p && p < |res.arr_ref| ==> res.arr_ref[q] != res.arr_ref[p]",
+        "res != matrix",
+        "forall q: Int :: 0 <= q && q < |res.arr_ref| ==> !(res.arr_ref[q] in matrix.arr_ref)"
+      ]
+    }
+  }
+}

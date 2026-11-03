@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "IsPrefix.isPrefix": {
+      "requires": [
+        "acc(pat.str_chars, 1/2)",
+        "acc(txt.str_chars, 1/2)"
+      ],
+      "ensures": [
+        "acc(pat.str_chars, 1/2)",
+        "acc(txt.str_chars, 1/2)",
+        "pat.str_chars == old(pat.str_chars)",
+        "txt.str_chars == old(txt.str_chars)",
+        "res == (|pat.str_chars| <= |txt.str_chars| && (forall q: Int :: 0 <= q && q < |pat.str_chars| ==> pat.str_chars[q] == txt.str_chars[q]))"
+      ]
+    }
+  }
+}

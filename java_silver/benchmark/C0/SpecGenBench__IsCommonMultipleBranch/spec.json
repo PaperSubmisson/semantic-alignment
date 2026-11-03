@@ -1,0 +1,10 @@
+{
+  "methods": {
+    "IsCommonMultipleBranch.isCommonMultiple": {
+      "requires": [
+        "a != 0",
+        "b != 0"
+      ]
+    }
+  }
+}

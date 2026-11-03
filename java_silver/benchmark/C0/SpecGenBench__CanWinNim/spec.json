@@ -1,0 +1,7 @@
+{
+  "methods": {
+    "CanWinNim.canWinNim": {
+      "requires": []
+    }
+  }
+}
